@@ -1,0 +1,2258 @@
+
+/*** Spinner Start ***/
+/*** Spinner ***/
+:root {
+    --primary: #2847c5; /* اللون الأساسي */
+    --secondary: #829eb8; /* لون ثانوي */
+  }
+
+
+
+
+/*---------------------
+  section-title CSS
+-----------------------*/
+.section-title {
+    margin-bottom: 50px;
+  }
+  .section-title.center-title {
+    text-align: right;
+  }
+  .section-title.center-title h2:after {
+    right: 0;
+    margin: 0 auto;
+  }
+ 
+  .section-title h2 {
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 25px;
+  }
+  .section-title h2:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    width: 70px;
+    background: #00bfe7;
+    content: "";
+  }
+  
+
+  
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+/*** Button Start ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+
+
+
+.btn.btn-light:hover {
+    background: var(--primary) !important;
+    color: var(--bs-light) !important;
+}
+
+
+.RotateMoveLeft {
+    position: relative;
+    animation: RotateMoveLeft 10s linear infinite;
+}
+
+.RotateMoveRight {
+    position: relative;
+    animation: RotateMoveLeft 10s linear infinite;
+}
+
+@keyframes RotateMoveLeft {
+    0%   {left: 0px;}
+    50%   {left: 40px;}
+    100%  {left: 0px;}
+}
+
+@keyframes RotateMoveRight {
+    0%   {right: 0px;}
+    50%   {right: 40px;}
+    100%  {right: 0px;}
+}
+
+
+/*** Navbar ***/
+
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 25px;
+    padding: 35px 0;
+    color: var(--bs-dark) !important;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: var(--dark) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--bs-primary) !important;
+}
+
+.navbar-light .navbar-brand img {
+    max-height: 50px;
+    transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-brand img {
+    max-height: 45px;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        border-radius: 10px;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    transition: .5s;
+    opacity: 1;
+}
+
+.collapse.navbar-collapse {
+    transition: 0.5s;
+}
+
+@media (max-width: 992px) {
+    nav.bg-transparent {
+        position: absolute;
+        width: 100%;
+        background: transparent !important;
+    }
+
+    .navbar.navbar-expand-lg button span {
+        position: relative;
+        z-index: 99;
+    }
+
+    .navbar {
+        position: relative;
+        background: var(--bs-light);
+        z-index: 2;
+    }
+
+    .sticky-top.navbar-light {
+        position: relative;
+        background: var(--bs-white) !important;
+        padding: 0 20px 20px 20px !important;
+    }
+
+    .sticky-top.navbar-light {
+        background: transparent;
+    }
+
+    nav.navbar {
+        padding: 0 30px 30px 0;
+    }
+
+    .navbar.navbar-expand-lg .navbar-toggler {
+        padding: 10px 20px;
+        border: 1px solid var(--bs-primary);
+        color: var(--bs-primary);
+    }
+
+    .navbar-light .navbar-collapse {
+        margin-top: 15px;
+        border-top: 1px solid #DDDDDD;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top.navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+        margin-left: 0;
+        color: var(--bs-dark) !important;
+    }
+
+
+    .navbar-light .navbar-brand img {
+        max-height: 45;
+    }
+
+    .hero-header {
+        margin-top: -100px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-light {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: transparent !important;
+        z-index: 999;
+    }
+    
+    .sticky-top.navbar-light {
+        position: fixed;
+        background: var(--bs-light) !important;
+    }
+    .contact__map {
+        margin-bottom: 40px;
+      }
+}
+/*** Navbar End ***/
+
+/*** Single Page Hero Header Start ***/
+.bg-breadcrumb {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(102, 16, 242, 0.05), rgba(102, 16, 242, 0.05));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 0 60px 0;
+    margin-bottom: 6rem;
+    transition: 0.5s;
+}
+
+.bg-breadcrumb::after {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    border-radius: 300px;
+    border: 80px solid rgba(247, 71, 128, 0.05);
+    background: transparent;
+    animation: RotateMoveSingle 5s linear infinite;
+    z-index: -1;
+}
+
+.bg-breadcrumb .breadcrumb {
+    position: relative;
+    z-index: 2;
+}
+
+
+@keyframes RotateMoveSingle {
+    0% {
+        -webkit-transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
+        transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
+    }
+      100% {
+        -webkit-transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+        transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+    }
+
+    0% {bottom: 0px;}
+    50%   {left: -10px;}
+    75%   {bottom: 10%;}
+    100%  {bottom: 0px;}
+}
+
+.bg-breadcrumb::before {
+    content: "";
+    position: absolute;
+    top: -15%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    border-radius: 300px;
+    border: 80px solid rgba(247, 71, 128, 0.04);
+    background: transparent;
+    animation: RotateMoveSingle 5s linear infinite;
+    z-index: -1;
+}
+
+@keyframes RotateMoveSingle {
+    0% {
+        -webkit-transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
+        transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
+    }
+      100% {
+        -webkit-transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+        transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+    }
+
+    0% {top: 0px;}
+    50%   {top: 10%;}
+    100%  {top: 0px;}
+}
+
+@media (max-width: 992px) {
+    .bg-breadcrumb {
+        padding-top: 100px !important;
+    }
+}
+
+.bg-breadcrumb .breadcrumb-item a {
+    color: var(--bs-dark) !important;
+}
+
+
+.breadcrumb-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.breadcrumb-animation li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(102, 16, 242, 0.07);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.breadcrumb-animation li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.breadcrumb-animation li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.breadcrumb-animation li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.breadcrumb-animation li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.breadcrumb-animation li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.breadcrumb-animation li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.breadcrumb-animation li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.breadcrumb-animation li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.breadcrumb-animation li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.breadcrumb-animation li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+/*** Single Page Hero Header End ***/
+
+
+/*** About page ***/
+.about{
+  text-align: right;
+}
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+ direction: rtl;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero p {
+  color: #ffffff;
+  margin: 5px 0 0 0;
+  font-size: 20px;
+}
+
+.hero .sign-up-form {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #000;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  direction: ltr;
+
+}
+
+.hero .sign-up-form input[type=email] {
+  background-color: transparent;
+  border: 0;
+  padding: 4px 10px;
+  width: 100%;
+}
+
+.hero .sign-up-form input[type=email]:focus-visible {
+  outline: none;
+}
+
+.hero .sign-up-form input[type=submit] {
+  border: 0;
+  box-shadow: none;
+  background-color: var(--primary);
+  border-color: var(--secondary);
+  padding: 8px 20px 10px 20px;
+  border-radius: 7px;
+  color: var(--contrast-color);
+  transition: 0.3s;
+}
+
+.hero .sign-up-form input[type=submit]:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Stats Section
+--------------------------------------------------------------*/
+.stats {
+  position: relative;
+  padding: 80px 20px; /* تقليل التباعد لتناسب الشاشات الصغيرة */
+  background-color: var(--primary);
+  color: #ffffff;
+  height: auto; /* إزالة الارتفاع الثابت */
+  margin: 20px; /* تقليل التباعد من الجوانب لتناسب الشاشات الصغيرة */
+  border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+  .stats {
+    padding: 120px 0;
+    margin: 50px;
+    border-radius: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .stats {
+    margin: 100px;
+    border-radius: 40px;
+  }
+}
+
+.stats:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 40%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.stats .container {
+  position: relative;
+  z-index: 3;
+}
+
+.stats .stats-item {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.stats .stats-item span {
+  font-size: 16px; /* حجم أصغر للشاشات الصغيرة */
+  display: block;
+  color: var(--default-color);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+
+@media (min-width: 768px) {
+  .stats .stats-item span {
+    font-size: 48px;
+  }
+}
+
+.stats .stats-item p {
+  padding: 0;
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 14px; /* حجم أصغر للشاشات الصغيرة */
+  font-weight: 700;
+  color: #e4e4e4;
+}
+
+@media (min-width: 768px) {
+  .stats .stats-item p {
+    font-size: 16px;
+  }
+}
+
+.stats-item .icon {
+  margin-bottom: 10px; /* مسافة بين الأيقونة والرقم */
+  width: 40px; /* حجم الأيقونة */
+  height: 40px; /* حجم الأيقونة */
+}
+
+
+
+
+/*** Service Start ***/
+.cat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+  border: 1px solid transparent;
+  margin: 20px; /* مسافة بين العناصر */
+  padding: 50px; /* padding موحد */
+  flex: 1 0 200px; /* تأكد من أن كل كارد له نفس العرض الأدنى */
+  height: 300px; /* يمكنك تحديد ارتفاع موحد */
+  transition: border-color 0.5s, box-shadow 0.5s;
+}
+
+.cat-item:hover {
+  border-color: rgba(0, 0, 0, .08);
+  box-shadow: none;
+}
+.latest__slider.owl-carousel {
+  display: flex;
+  flex-wrap: wrap;
+}
+.latest__slider.owl-carousel .owl-item {
+  max-width: 100%;
+  display: grid; /* استخدام Grid */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* تعيين عدد الأعمدة بناءً على حجم الشاشة */
+  gap: 20px; /* الفجوة بين الكاردز */
+  text-align: center;
+  transition: transform 0.7s ease; }
+.latest__slider.owl-carousel .owl-dots {
+  text-align: center;
+  padding-top: 35px;
+}
+.latest__slider.owl-carousel .owl-dots button {
+  height: 8px;
+  width: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #b1b0b0;
+}
+.latest__slider.owl-carousel .owl-dots button.active {
+  background: #0770b6;
+}
+.latest__slider.owl-carousel .owl-dots button:last-child {
+  margin-right: 0;
+}
+
+
+.cat-item img {
+  width: 80%;
+  height: auto;
+  max-width: 50%;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.cat-item h6{
+  font-size: 27px;
+  font-weight: 300;
+  color: #000000;
+}
+
+
+
+
+
+
+/*** Service End ***/
+
+
+/*** Features Start ***/
+.feature .feature-img {
+    background: var(--bs-light);
+    border-radius: 58% 42% 21% 79% / 30% 29% 71% 70%;
+}
+/*** Features End ***/
+
+
+
+/*** Testimonial Start ***/
+.testimonial {
+    position: relative;
+    background: var(--bs-light);
+    overflow: hidden;
+    z-index: 1;
+}
+.testimonial::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+   /* background: url(../img/testimonial-img-2.jpg) center center no-repeat;*/
+    animation: TestimonialMoveLeft 100s linear infinite;
+    z-index: -1;
+
+}
+
+.testimonial::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+  /*  background: url(../img/testimonial-img-3.jpg) center center no-repeat; */
+    animation: TestimonialMoveRight 100s linear infinite;
+    z-index: -1;
+
+}
+
+@keyframes TestimonialMoveLeft {
+    0%   {left: 0px;}
+    25%   {top: 100px;}
+    50%   {left: 100%;}
+    75%   {top: 80%;}
+    100%  {left: 0px;}
+}
+
+@keyframes TestimonialMoveRight {
+    0%   {right: 0px;}
+    25%   {top: 100px;}
+    50%   {right: 100%;}
+    75%   {top: 80%;}
+    100%  {right: 0px;}
+}
+
+.testimonial .testimonial-carousel.owl-carousel {
+    position: relative;
+    padding: 0 35px;
+    transition: 0.5s;
+}
+
+.testimonial .testimonial-carousel .owl-nav .owl-prev {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 65px;
+    height: 65px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(102, 16, 242, 0.09);
+    color: var(--bs-primary);
+    transition: 0.5s;
+}
+
+.testimonial .testimonial-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 65px;
+    height: 65px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(102, 16, 242, 0.09);
+    color: var(--bs-primary);
+    transition: 0.5s;
+}
+
+
+.testimonial .testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial .testimonial-carousel .owl-nav .owl-next:hover {
+    background: var(--bs-primary);
+    color: var(--bs-white) !important;
+}
+
+
+.testimonial-carousel .owl-dots {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-dots .owl-dot img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 15px;
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-dots .owl-dot.active img {
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    border: 4px solid var(--bs-secondary);
+}
+
+@media (min-width: 900px) {
+    .testimonial .testimonial-carousel .testimonial-item .testimonial-inner p.fs-7 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial .testimonial-carousel.owl-carousel {
+        padding: 0;
+    }
+
+    .testimonial .testimonial-carousel .owl-nav .owl-prev {
+        margin-top: -250px;
+        margin-left: -15px;
+    }
+
+    .testimonial .testimonial-carousel .owl-nav .owl-next {
+        margin-top: -250px;
+        margin-right: -15px;
+    }
+    .contact__map {
+        margin-bottom: 120px;
+      }
+}
+/*** Testimonial End ***/
+
+  
+  
+/*---------------------
+  Contact Widget
+-----------------------*/
+.contact-widget {
+    text-align: right;
+    background: #100028;
+    padding-top: 70px;
+  }
+  
+  .contact__widget__item {
+    margin-bottom: 30px;
+  }
+  
+  .contact__widget__item__icon {
+    height: 70px;
+    width: 70px;
+    border: 1px solid rgba(225, 225, 225, 0.5);
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    float: right;
+    margin-left: 30px;
+  }
+  .contact__widget__item__icon i {
+    font-size: 30px;
+    color: #ffffff;
+  }
+  
+  .contact__widget__item__text {
+    overflow: hidden;
+    padding-top: 7px;
+  }
+  .contact__widget__item__text h4 {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .contact__widget__item__text p {
+    margin-bottom: 0;
+  }
+  
+  /*---------------------
+    Contact
+  -----------------------*/
+  
+.site-section {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  position: relative;
+  text-align: right;
+  z-index: 2; }
+  .site-section ::placeholder{
+    text-align: right;
+  }
+  @media (max-width: 991.98px) {
+    .site-section {
+      
+      padding-top: 3rem;
+      padding-bottom: 3rem; } }
+   
+      .contact-info {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 10px; /* مسافة بين العناصر */
+      }
+      
+      .contact-info i {
+        font-size: 24px; /* حجم الأيقونة */
+        margin-left: 40px; /* مساحة بين النص والأيقونة */
+        border-radius: 36px;
+        background-color: #e9e9e9;
+        padding: 20px;
+      }
+      
+
+
+/*** Footer Start ***/
+
+/* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: #001D38;
+}
+
+/* line 7, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer p {
+  font-family: "Roboto", sans-serif !important;
+}
+
+/* line 10, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top {
+  padding-top: 145px;
+  padding-bottom: 129px;
+}
+
+@media (max-width: 767px) {
+  /* line 10, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+  .footer .footer_top {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 17, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+  .footer .footer_top .footer_widget {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 17, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+  .footer .footer_top .footer_widget {
+    margin-bottom: 30px;
+  }
+}
+
+/* line 24, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .footer_title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 767px) {
+  /* line 24, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+  .footer .footer_top .footer_widget .footer_title {
+    margin-bottom: 20px;
+  }
+}
+
+/* line 35, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .footer_logo {
+  font-size: 22px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  /* line 35, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+  .footer .footer_top .footer_widget .footer_logo {
+    margin-bottom: 20px;
+  }
+}
+
+/* line 45, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p {
+  color: #AAB1B7;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* line 51, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p a {
+  color: #AAB1B7;
+}
+
+/* line 53, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p a:hover {
+  color: #FFFFFF;
+}
+
+/* line 59, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text {
+  font-size: 16px;
+  color: #00D363;
+  margin-bottom: 23px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* line 65, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text a.domain {
+  color: #00D363;
+  font-weight: 400;
+}
+
+/* line 68, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text a.domain:hover {
+  color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+/* line 74, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text.doanar link {
+  font-weight: 500;
+  color: #00D363;
+}
+
+/* line 78, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text.doanar link:hover {
+  color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+/* line 82, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text.doanar a.first {
+  margin-bottom: 10px;
+}
+
+/* line 90, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget ul li {
+  color: #AAB1B7;
+  font-size: 14px;
+  line-height: 42px;
+}
+
+/* line 94, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget ul li a {
+  color: #AAB1B7;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 98, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget ul li a:hover {
+  color: #FFFFFF;
+}
+
+/* line 104, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_form {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* line 107, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_form input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  padding-left: 20px;
+  font-size: 15px;
+  color: #FFFFFF;
+  border: none;
+  border: 1px solid #334A60;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 118, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_form input::placeholder {
+  font-size: 14px;
+  color: #AAB1B7;
+}
+
+/* line 122, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_form input:focus {
+  outline: none;
+}
+
+/* line 126, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  background: #00D363;
+  padding: 10px;
+  padding: 0 22px;
+  cursor: pointer;
+  border-radius: 5px;
+  top: 5px;
+  right: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 146, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_text {
+  font-size: 14px;
+  color: #AAB1B7;
+  line-height: 26px;
+}
+
+/* line 153, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .copy-right_text {
+  padding-bottom: 30px;
+}
+
+/* line 155, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .copy-right_text .copy_right {
+  font-size: 15px;
+  color: #AAB1B7;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  /* line 155, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+  .footer .copy-right_text .copy_right {
+    font-size: 14px;
+  }
+}
+
+/* line 163, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .copy-right_text .copy_right a {
+  color: #00D363;
+}
+
+/* line 168, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .socail_links {
+  margin-top: 47px;
+}
+
+@media (max-width: 767px) {
+  /* line 168, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+  .footer .socail_links {
+    margin-top: 30px;
+  }
+}
+
+/* line 174, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .socail_links ul li {
+  display: inline-block;
+  list-style-type: disc;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* line 177, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .socail_links ul li link{
+  font-size: 15px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  line-height: 40px !important;
+  margin-right: 7px;
+  color: #fff !important;
+  list-style-type: disc;
+  line-height: 40px !important;
+  background: transparent;
+  color: #334A60 !important;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid #334A60;
+}
+
+/* line 193, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .socail_links ul li link i {
+  font-size: 15px;
+  line-height: 40px;
+  position: relative;
+  top: -1px;
+}
+
+/* line 201, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+.footer .socail_links ul li:hover a {
+  color: #fff !important;
+  background: #00D363;
+  border-color: transparent;
+  border: 1px solid #00D363;
+}
+
+
+
+
+/*** login Start ***/
+.wrapper {
+    width: 380px;
+    padding: 40px 30px 50px 30px;
+    background: #fff;
+    border-radius: 5px;
+    border:1px solid #cecece;
+    text-align: center;
+    margin: 80px auto; /* استخدام auto لجعل العنصر في المركز */
+    margin-bottom: 100px; /* هامش سفلي لجعل المساحة بين النموذج والـ Footer */
+}
+  .wrapper header {
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .wrapper form {
+    margin: 40px 0;
+  }
+  .wrapper form .field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .wrapper form .field.shake {
+    animation: shake 0.3s ease-in-out;
+  }
+  @keyframes shake {
+    0%, 100% {
+      margin-left: 0px;
+    }
+    20%, 80% {
+      margin-left: -12px;
+    }
+    40%, 60% {
+      margin-left: 12px;
+    }
+  }
+  .wrapper form .field .input-area {
+    height: 50px;
+    width: 100%;
+    position: relative;
+  }
+  .wrapper form input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 45px;
+    font-size: 16px;
+    background: none;
+    caret-color: var(--primary);
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
+    direction: rtl;
+  }
+  .wrapper form .field input:focus,
+  form .field.valid input {
+    border-color: var(--primary);
+  }
+  .wrapper form .field.shake input,
+  form .field.error input {
+    border-color: #dc3545;
+  }
+  .wrapper .field .input-area i {
+    position: absolute;
+    text-align: right;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  .wrapper .input-area .icon {
+    left: 15px;
+    color: #bfbfbf;
+    transition: color 0.2s ease;
+  }
+  .wrapper .input-area .error-icon {
+    right: 15px;
+    color: #dc3545;
+  }
+  .wrapper form input:focus ~ .icon,
+  form .field.valid .icon {
+    color: var(--primary);
+  }
+  .wrapper form .field.shake input:focus ~ .icon,
+  form .field.error input:focus ~ .icon {
+    color: #bfbfbf;
+  }
+  .wrapper form input::placeholder {
+    color: #b6b6b6;
+    font-size: 18px;
+    text-align: right;
+  }
+  .wrapper form .field .error-txt {
+    color: #dc3545;
+    text-align: left;
+    margin-top: 5px;
+  }
+  .wrapper form .field .error {
+    display: none;
+  }
+  .wrapper form .field.shake .error,
+  form .field.error .error {
+    display: block;
+  }
+  .wrapper form .pass-txt {
+    text-align: right;
+    margin-top: -10px;
+  }
+  .wrapper a {
+    color: #5372F0;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .wrapper a:hover {
+    text-decoration: underline;
+  }
+  .wrapper form input[type="submit"] {
+    height: 50px;
+    margin-top: 30px;
+    color: #ececec;
+    padding: 0;
+    border: none;
+    background: var(--primary);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 300;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  .wrapper form input[type="submit"]:hover {
+    background: var(--secondary);
+  }
+  
+  .error {
+    color: red; /* اللون الأحمر */
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #ffe8e8;
+    padding: 10px;
+  }
+  
+
+
+
+
+
+/*---------------------
+  Logo
+-----------------------*/
+.logo {
+    background: #ffffff;
+    padding: 100px 10px;
+  }
+  
+  .logo__carousel.owl-carousel .owl-item img {
+    width: 80%;
+    height: 150px;
+padding: 28px;
+background: #f0f0f0ab;
+border-radius: 20px;
+border: 2px solid rgba(78, 78, 78, 0.1);
+
+  }
+ 
+
+
+
+.editor {
+  height: 375px;
+ }
+
+  .site-section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    position: relative;
+    z-index: 2; }
+    @media (max-width: 991.98px) {
+      .site-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem; } }
+  
+  .text-black {
+    color: #000 !important; }
+  
+
+    .section-hero, .section-hero > .container > .row {
+      height: 100vh;
+      min-height: 900px; }
+    
+    .section-hero.inner-page, .section-hero.inner-page > .container > .row {
+      height: auto;
+      min-height: auto;
+      padding-top: 6em;
+      padding-bottom: 3em; }
+    
+    .section-hero.overlay, .section-hero.overlay-2 {
+      position: relative; }
+      .section-hero.overlay:before, .section-hero.overlay-2:before {
+        z-index: 1;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); }
+    
+    .section-hero.overlay-2:before {
+      background: rgba(125, 131, 132, 0.95); }
+    
+    .section-hero > .container {
+      z-index: 2;
+      position: relative; }
+    
+
+
+
+
+
+
+
+
+      
+/* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area {
+  background: #f1f1f1bd;
+  padding-bottom: 80px;
+}
+
+/* line 4, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area.plus_padding {
+  padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  /* line 4, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .job_listing_area.plus_padding {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 10, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .job_listing_area .brouse_job {
+    text-align: left !important;
+    margin-top: 20px;
+  }
+}
+
+/* line 16, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists {
+  margin-top: 50px;
+}
+
+/* line 18, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists .single_jobs {
+  padding: 30px;
+  margin-bottom: 12px;
+  border: 1px solid transparent;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+
+@media (max-width: 767px) {
+  /* line 18, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .job_listing_area .job_lists .single_jobs {
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 27, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .job_listing_area .job_lists .single_jobs .jobs_left {
+    display: block !important;
+    overflow: hidden;
+  }
+}
+
+/* line 32, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists .single_jobs .jobs_left .thumb {
+  float: left;
+  width: 82px;
+  height: 82px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 15px;
+  background: #ffffff;
+  margin-right: 25px;
+  border: 1px solid #F0F0F0;
+}
+
+/* line 46, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists .single_jobs .jobs_left .jobs_conetent {
+  float: left;
+}
+
+/* line 48, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists .single_jobs .jobs_left .jobs_content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.job_listing_area .job_lists .single_jobs .jobs_left .jobs_content h3:hover{
+  color: var(--primary);
+}
+
+@media (max-width: 767px) {
+  /* line 48, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .job_listing_area .job_lists .single_jobs .jobs_left .jobs_conetent h4 {
+    margin-top: 15px;
+  }
+}
+
+/* line 56, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists .single_jobs .jobs_left .jobs_conetent h4:hover {
+  color: var(--bs-primary);
+}
+
+@media (max-width: 767px) {
+  /* line 60, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .job_listing_area .job_lists .single_jobs .jobs_left .jobs_conetent .links_locat {
+    display: block !important;
+  }
+}
+
+/* line 64, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists .single_jobs .jobs_left .jobs_conetent .links_locat .location {
+  margin-right: 50px;
+}
+
+@media (max-width: 767px) {
+  /* line 64, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .job_listing_area .job_lists .single_jobs .jobs_left .jobs_conetent .links_locat .location {
+    margin-right: 10px;
+  }
+}
+
+/* line 69, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists .single_jobs .jobs_left .jobs_conetent .links_locat .location p {
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #AAB1B7;
+}
+
+/* line 73, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists .single_jobs .jobs_left .jobs_conetent .links_locat .location p i {
+  margin-right: 7px;
+}
+
+@media (max-width: 767px) {
+  /* line 82, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .job_listing_area .job_lists .single_jobs .jobs_right .apply_now {
+    margin: 10px 0;
+  }
+}
+
+
+/* line 109, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists .single_jobs .jobs_right .date {
+  text-align: right;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  /* line 109, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .job_listing_area .job_lists .single_jobs .jobs_right .date {
+    text-align: left;
+  }
+}
+
+/* line 115, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists .single_jobs .jobs_right .date p {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-style: italic;
+  color: #7A838B;
+}
+
+/* line 123, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_lists .single_jobs:hover {
+  border-color: var(--primary);
+}
+
+
+
+
+.pagination_wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination_wrap ul {
+  padding: 0; /* إزالة الحشوة الافتراضية */
+  list-style: none; /* إزالة النقاط */
+}
+
+.pagination_wrap ul li {
+  display: inline-block;
+}
+
+.pagination_wrap ul li a {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #c0c0c0;
+  border-radius: 50%; /* إزالة -webkit و -moz */
+  font-size: 14px; /* الحفاظ على حجم الخط موحد */
+  text-align: center;
+  line-height: 38px;
+  display: inline-block;
+  color: #5c5959;
+  margin: 0 4px;
+  transition: border-color 0.3s, color 0.3s; /* إضافة تأثير عند التمرير */
+}
+
+.pagination_wrap ul li a i,
+.pagination_wrap ul li a span {
+  line-height: 38px;
+}
+
+.pagination_wrap ul li a:hover {
+  border-color: var(--primary);
+  color: var(--secondary);
+}
+
+
+
+
+/* line 141, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.job_listing_area .job_filter .form_inner .single_field input {
+  height: 60px;
+  border: 1px solid #E8E8E8;
+  padding: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* line 192, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.recent_joblist {
+  padding: 15px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  /* line 192, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .recent_joblist {
+    margin-top: 40px;
+  }
+}
+
+/* line 199, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.recent_joblist h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  color: #001D38;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  /* line 199, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .recent_joblist h4 {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 209, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+  .recent_joblist .serch_cat {
+    display: block !important;
+  }
+}
+
+/* line 216, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
+.recent_joblist .nice-select {
+  width: 180px;
+  height: 50px;
+  line-height: 50px;
+  color: #12181d;
+  font-size: 16px;
+}
+
+
+
+.job_details_area {
+  background: #F5F7FA;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+  .single_jobs {
+    padding: 30px;
+    border-bottom: 1px solid #EAEAEA;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+    .jobs_left {
+      display: flex;
+    }
+    .jobs_left   .thumb {
+        float: left;
+        width: 82px;
+        height: 82px;
+        border-radius: 5px;
+        padding: 15px;
+        background: #F5F7FA;
+        margin-right: 25px;
+        border: 1px solid #F0F0F0;
+      }
+
+      .jobs_conetent {
+        float: left;
+      }
+      .jobs_conetent  h4 {
+          font-size: 24px;
+          margin-bottom: 10px;
+          font-weight: 400;
+          transition: 0.3s;
+      }
+      .jobs_conetent  h4:hover {
+            color: #00D363;
+          }
+        
+
+        .links_locat  .location {
+     
+            margin-right: 50px;
+        }
+            p {
+              margin-bottom: 0;
+              font-size: 16px;
+              color: #AAB1B7;
+            }
+              i {
+                margin-right: 7px;
+              }
+         
+    .jobs_right {
+      text-align: right;
+    }
+    .jobs_right .apply_now {
+        margin: 10px 0;
+        text-align: center;
+        padding: 7px;
+        color: #ffffff;
+        background-color: var(--primary);
+      }
+      .jobs_right .apply_now a{
+        color: #ffffff;
+      }
+     
+      .jobs_right .apply_now a:hover{
+        color: #000000;
+      }
+       link.boxed-btn3 {
+          padding: 9px 27px;
+          font-size: 14px;
+        }
+      
+
+        .job_listing_area .job_lists .single_jobs .jobs_right  .date {
+        margin-top: 10px;
+      }
+        p {
+          margin-bottom: 0;
+          font-size: 14px;
+          font-style: italic;
+          color: #7A838B;
+        }
+   
+  .descript_wrap {
+    padding: 40px;
+  }
+    .single_wrap {
+      margin-bottom: 30px;
+    }
+      .apply_job_form h4 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #001D38;
+        margin-bottom: 35px;
+      }
+
+      p {
+        color: #7A838B;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+      }
+      ul {
+        list-style-type: none; /* إلغاء النقاط الأصلية */
+        padding: 0; /* إزالة الحشو الافتراضي */
+        margin: 0; /* إزالة الهوامش الافتراضية */
+    }
+    
+    ul li {
+        position: relative;
+        padding-left: 25px; /* مساحة بين النقطة والنص */
+    }
+    
+    .single_wrap ul li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px; /* ضبط الموضع حسب الحاجة */
+        width: 8px; /* عرض النقطة */
+        height: 8px; /* ارتفاع النقطة */
+        background-color: #7A838B; /* لون النقطة */
+        border-radius: 50%; /* لجعلها دائرة */
+    }
+    
+
+    
+      .descript_wrap::before {
+          left: 0;
+          top: 0;
+          width: 7px;
+          height: 7px;
+          background: #7A838B;
+          border-radius: 50%;
+          top: 12px;
+          content: '';
+        }
+      
+    
+  
+
+  .apply_job_form {
+    margin-top: 30px;
+    padding: 40px;
+  }
+    h4 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    .input_field  input,
+    textarea{
+     
+        height: 60px;
+        border: 1px solid #E8E8E8;
+        width: 100%;
+        border-radius: 5px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+    .input_field  input,
+    textarea::placeholder {
+          color: #7A838B;
+          font-size: 16px;
+        }
+
+        .input_field  input,
+    textarea:focus {
+          outline: none;
+        }
+      
+
+      textarea {
+        height: 188px;
+        padding: 20px;
+      }
+
+      .file_up  input{
+      
+          position: relative;
+        }
+        .file_up  input::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: 'Upload CV';
+          }
+      
+    
+
+    .input-group {
+      width: 100%;
+      height: 60px;
+      border-radius: 5px !important;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+    }
+    .input-group button {
+        background: transparent;
+        border: none;
+        font-size: 16px;
+        color: #7A838B;
+        padding-left: 20px;
+        margin-right: 5px;
+      }
+
+      .custom-file {
+        margin-bottom: 0;
+        height: 60px;
+        border: none;
+      }
+        .custom-file-label {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1;
+          height: 100%;
+          padding: 0;
+          line-height: 60px;
+          color: #7A838B;
+          background-color: transparent;
+          border-radius: 0;
+          border: none;
+        }
+
+        .custom-file-input {
+          height: 100%;
+          display: none;
+        }
+    
+        .job_summary {
+          background: #c42222;
+      }
+      
+      .job_summary .summary_header {
+          border-bottom: 1px solid #EAEAEA;
+          padding: 40px;
+      }
+      
+      h3{
+        font-size: 24px;
+        color: #001D38;
+        font-weight: 400;
+      }
+    .job_content {
+      padding: 40px;
+    }
+      ul li {
+        font-size: 16px;
+        font-weight: 400;
+        color: #AAB1B7;
+        line-height: 38px;
+        padding-left: 18px;
+        position: relative;
+      }
+      .job_content ul li::before {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border: 1px solid #AAB1B7;
+          border-radius: 50%;
+          left: 0;
+          content: '';
+          top: 16px;
+        }
+
+        span {
+          color: #001D38;
+        }
+      
+    
+  
+
+  .share_wrap {
+    background: #fff;
+    margin: 30px 0;
+    padding: 10px;
+  }
+  .share_wrap  span {
+      font-size: 16px;
+      font-weight: 500;
+      color: #001D38;
+      margin-right: 20px;
+    }
+
+    .share_wrap ul li {
+      display: inline-block;
+      list-style-type: disc;
+      margin-right: 10px;
+    }
+    .share_wrap a {
+        font-size: 16px;
+        color: #D5D5D5;
+      }
+      .share_wrap:hover {
+          color: #00D363;
+        }
+      
+    
+  
+
+  .job_location_wrap {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .custom-file-label::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: calc(2.25rem + 2px - 1px * 2);
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: #495057;
+    content: "Browse";
+    background-color: #e9ecef;
+    border-left: 1px solid #ced4da;
+    border-radius: 0 .25rem .25rem 0;
+    margin-bottom: 0;
+    height: 60px;
+  
+  }
+
+/* line 13, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.contact-info__icon {
+  margin-right: 20px;
+}
+
+/* line 16, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.contact-info__icon i, .contact-info__icon span {
+  color: #8f9195;
+  font-size: 27px;
+}
+
+/* line 24, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.contact-info .media-body h3 {
+  font-size: 16px;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #2a2a2a;
+}
+
+/* line 30, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.contact-info .media-body h3 a:hover {
+  color: #ff5e13;
+}
+
+/* line 36, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.contact-info .media-body p {
+  color: #8a8a8a;
+}
+
+/*=================== contact banner end ====================*/
+/*=================== contact form start ====================*/
+/* line 45, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.contact-title {
+  font-size: 27px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* line 53, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.form-contact label {
+  font-size: 14px;
+}
+
+/* line 57, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.form-contact .form-group {
+  margin-bottom: 30px;
+}
+
+/* line 61, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.form-contact .form-control {
+  border: 1px solid #e5e6e9;
+  border-radius: 0px;
+  height: 48px;
+  padding-left: 18px;
+  font-size: 13px;
+  background: transparent;
+}
+
+/* line 69, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.form-contact .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+/* line 74, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.form-contact .form-control::placeholder {
+  font-weight: 300;
+  color: #999999;
+}
+
+/* line 80, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.form-contact textarea {
+  border-radius: 0px;
+  height: 100% !important;
+}
+
+/*=================== contact form end ====================*/
+/* Contact Success and error Area css
+============================================================================================ */
+/* line 97, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.modal-message .modal-dialog {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) !important;
+  margin: 0px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* line 106, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.modal-message .modal-dialog .modal-content .modal-header {
+  text-align: center;
+  display: block;
+  border-bottom: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* line 112, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.modal-message .modal-dialog .modal-content .modal-header .close {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  padding: 0px;
+  color: #fff;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* line 121, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.modal-message .modal-dialog .modal-content .modal-header h2 {
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* line 126, ../../Arafath/CL/December/235. Job board/HTML/scss/_contact.scss */
+.modal-message .modal-dialog .modal-content .modal-header p {
+  display: block;
+}
+
+.submit_btn {
+  text-align: center; /* محاذاة المحتوى إلى المركز */
+  margin-top: 20px; /* إضافة مساحة فوق الزر */
+  background-color: var(--primary); 
+  border-radius: 5px; /* زوايا مدورة */
+  color: #F0F0F0; /* لون النص */
+
+}
+
+.submit-button {
+  padding: 10px 20px; /* حشوة داخلية للزر */
+  color: white; /* لون النص */
+  border: none; /* إزالة الحدود الافتراضية */
+  border-radius: 5px; /* زوايا مدورة */
+  font-size: 16px; /* حجم الخط */
+  cursor: pointer; /* تغيير شكل المؤشر عند التمرير */
+  width: 100%; /* عرض الزر 100% */
+  transition: background-color 0.3s; /* تأثير عند تغيير اللون */
+}
+
+.submit-button:hover {
+  background-color: #a0bad6; /* لون مختلف عند التمرير */
+}
+
+
+/*** Category ***/

@@ -1,0 +1,53 @@
+.topbar {
+    background-color: #343a40; /* لون داكن للرأس */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .topbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* لضبط الشعار في بداية الرأس */
+  }
+  
+  .topbar .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .topbar .navbar-nav .nav-item {
+    margin-left: 20px;
+  }
+  
+  .topbar .tools {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* لضبط الأدوات والملفات الشخصية في نهاية الرأس */
+  }
+  
+  .topbar .dropdown-menu {
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .topbar .dropdown-menu .dropdown-item {
+    color: #333;
+    padding: 10px 15px;
+  }
+  
+  .topbar .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .topbar .pro-pic img {
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+  }
+  

@@ -1,0 +1,17 @@
+/* customStyles.css */
+
+  
+  .container-fluid {
+    padding: 0 15px;
+  }
+  
+  /* ضمان تناسق البطاقات والجداول داخل الصفحة */
+  .card {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  
+  .table-responsive {
+    margin-top: 20px;
+  }
+  
